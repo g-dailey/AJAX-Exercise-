@@ -75,7 +75,7 @@ function getDogImage(){
 fetch('https://dog.ceo/api/breeds/image/random')
   .then((response) => response.json())
   .then((status) => {
-    document.querySelector("#dog-image").innerHTML = `<img src = "${status.message}">`
+    document.querySelector("#dog-image").insertAdjacentHTML('beforeend',`<img src = "${status.message}">`);
   });
 
 }
